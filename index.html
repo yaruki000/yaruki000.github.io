@@ -83,11 +83,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨天晚上花了3-4個小時最後終於搞定hexo+github建立部落格<br>主要是參考這篇文章的[教學]<br>(<a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/</a>)<br>部落格的編寫是使用markdown語法，一樣同位博主有簡易的[教學]<br>(<a href="https://zhangslob.github.io/2017/02/26/%E5%88%A9%E7%94%A8HEXO%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">https://zhangslob.github.io/2017/02/26/%E5%88%A9%E7%94%A8HEXO%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/</a>)</p>
+        <p>昨天晚上花了3-4個小時最後終於搞定hexo+github建立部落格<br>主要是參考這篇文章的<a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">教學</a><br>部落格的編寫是使用markdown語法，一樣同位博主有簡易的<a href="https://zhangslob.github.io/2017/02/26/%E5%88%A9%E7%94%A8HEXO%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">教學</a></p>
 <p>詳細的建立步驟就不贅述了，大致紀錄一下流程還有我操作時遇到的問題和解決方式</p>
 <p>順帶一提系統是win10</p>
-<p>1.註冊github帳號，設定repository<br>2.安裝<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>,<a href="https://git-scm.com/" target="_blank" rel="external">git</a><br>3.安裝好Node.js後，可以用npm安裝hexo<br><code>$ npm install -g hexo-cli</code><br>這個步驟可以使用git bash做，也可以用cmd來做(win10中shift+右鍵是開啟powershell)<br>我其實也不太清楚應該要安裝在哪個路徑比較好，我自己是在存放部落格的資料夾內按右鍵或shift+右鍵，選擇git bash或powershell下指令來安裝<br>4.安裝好hexo就可以開始製作部落格了，一樣在存放資料夾內按右鍵或shift+右鍵來下指令<br>先初始化部落格<br><code>hexo init blog</code><br>然後生成<br><code>hexo generate</code></p>
-<p><code>hexo server</code>這個指令是在本地開啟伺服器，在瀏覽器輸入<a href="http://localhost:4000/就可以看到部落格" target="_blank" rel="external">http://localhost:4000/就可以看到部落格</a><br>5.上傳部落格到git上<br>首先打開git bash，要輸入github的使用者名稱和電子信箱<br><code>git config --global user.name &quot;使用者名稱&quot;</code><br><code>git config --global user.email &quot;電子信箱&quot;</code><br>如果要清除使用者的話，可以輸入<br><code>git config --global --unset user.name</code><br><code>git config --global --unset user.email</code><br>再來是建立ssh key，輸入<br><code>ssh-keygen -t rsa -C &quot;信箱地址&quot;</code><br>6.設定部落格配置<br>配置部署可以設置如下<br><code>deploy: 
+<p>##1.註冊github帳號，設定repository</p>
+<p>##2.安裝<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>,<a href="https://git-scm.com/" target="_blank" rel="external">git</a></p>
+<p>##3.安裝好Node.js後，可以用npm安裝hexo<br><code>$ npm install -g hexo-cli</code><br>這個步驟可以使用git bash做，也可以用cmd來做(win10中shift+右鍵是開啟powershell)<br>我其實也不太清楚應該要安裝在哪個路徑比較好，我自己是在存放部落格的資料夾內按右鍵或shift+右鍵，選擇git bash或powershell下指令來安裝</p>
+<p>##4.安裝好hexo就可以開始製作部落格了，一樣在存放資料夾內按右鍵或shift+右鍵來下指令<br>先初始化部落格<br><code>hexo init blog</code><br>然後生成<br><code>hexo generate</code></p>
+<p><code>hexo server</code>這個指令是在本地開啟伺服器，在瀏覽器輸入<a href="http://localhost:4000/就可以看到部落格" target="_blank" rel="external">http://localhost:4000/就可以看到部落格</a></p>
+<p>##5.上傳部落格到git上<br>首先打開git bash，要輸入github的使用者名稱和電子信箱<br><code>git config --global user.name &quot;使用者名稱&quot;</code><br><code>git config --global user.email &quot;電子信箱&quot;</code><br>如果要清除使用者的話，可以輸入<br><code>git config --global --unset user.name</code><br><code>git config --global --unset user.email</code><br>再來是建立ssh key，輸入<br><code>ssh-keygen -t rsa -C &quot;信箱地址&quot;</code></p>
+<p>##6.設定部落格配置<br>配置部署可以設置如下<br><code>deploy: 
   type: git
   repo: https://github.com/使用者名稱/repository_name.github.io.git
   branch: master</code><br>在部落格資料夾使用git bash下指令<br><code>hexo deploy</code><br>就可以上傳部落格到git上，過程會叫你登錄github<br><img src="/2017/06/26/使用hexo-github-page建立部落格/login.jpg" alt="login.jpg" title=""></p>
@@ -95,17 +100,14 @@
   type: git
   repo: git@github.com:yaruki000/yaruki000.github.io.git
   branch: master</code><br>這個repo其實就是quick step裡面ssh的地址<br><img src="/2017/06/26/使用hexo-github-page建立部落格/quick_step.jpg" alt="quick_step.jpg" title=""><br>那剛剛建立的ssh key其實就是在這邊會派上用場了，最後再次執行<code>hexo d</code>即上傳成功!</p>
-<p>所以之後要建立新文章，使用的指令有<br><code>hexo new &quot;文章標題&quot; #建立新文章
-hexo clean #清除緩存，clean無法改成字首簡寫
-hexo g #生成
-hexo d #deploy</code></p>
-<p>最後補充一下，編寫post的時候若想要放圖片<br>可以到_config.yml修改post_asset_folder為true，以後每建立新的文章都會順便建立專屬的資料夾讓你放圖片進去。<br><code>_config.yml
-post_asset_folder: true</code><br>那麼要顯示圖片就可以輸入：<br><code></code><br>不打附加文字的話<code></code>就可以了</p>
+<p>所以之後要建立新文章，使用的指令有</p>
+<p><pre><code>hexo new “文章標題” #建立新文章<br>hexo clean #清除緩存，clean無法改成字首簡寫<br>hexo g #生成<br>hexo d #deploy</code></pre></p>
+<p>最後補充一下，編寫post的時候若想要放圖片<br>可以到_config.yml修改post_asset_folder為true，以後每建立新的文章都會順便建立專屬的資料夾讓你放圖片進去。<br><code>post_asset_folder: true</code><br>那麼要顯示圖片就可以輸入：<br><code></code><br>不打附加文字的話<code></code>就可以了</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/26/使用hexo-github-page建立部落格/" data-id="cj4du0jzq00020cu28o1c2usp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/26/使用hexo-github-page建立部落格/" data-id="cj4du9kpe000080u24ypal0ui" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +144,7 @@ post_asset_folder: true</code><br>那麼要顯示圖片就可以輸入：<br><co
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/26/test/" data-id="cj4du0jzq00000cu2lpp9yxpw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/26/test/" data-id="cj4du9kpe000180u2zfw3oqg8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -187,7 +189,7 @@ post_asset_folder: true</code><br>那麼要顯示圖片就可以輸入：<br><co
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/26/hello-world/" data-id="cj4du0jzq00010cu2u5x25he7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/26/hello-world/" data-id="cj4du9kpu000280u2n1vinu8q" class="article-share-link">Share</a>
       
       
     </footer>
