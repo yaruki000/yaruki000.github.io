@@ -13,7 +13,7 @@
 <meta property="og:description" content="昨天晚上花了3-4個小時最後終於搞定hexo+github建立部落格主要是參考這篇文章的教學部落格的編寫是使用markdown語法，一樣同位博主有簡易的教學 詳細的建立步驟就不贅述了，大致紀錄一下流程還有我操作時遇到的問題和解決方式 順帶一提系統是win10 1.註冊github帳號，設定repository2.安裝Node.js,git3.安裝好Node.js後，可以用npm安裝hexo$ np">
 <meta property="og:image" content="http://yoursite.com/2017/06/26/使用hexo-github-page建立部落格/login.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/06/26/使用hexo-github-page建立部落格/quick_step.jpg">
-<meta property="og:updated_time" content="2017-06-26T08:00:58.998Z">
+<meta property="og:updated_time" content="2017-06-26T08:08:19.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+github page建立部落格">
 <meta name="twitter:description" content="昨天晚上花了3-4個小時最後終於搞定hexo+github建立部落格主要是參考這篇文章的教學部落格的編寫是使用markdown語法，一樣同位博主有簡易的教學 詳細的建立步驟就不贅述了，大致紀錄一下流程還有我操作時遇到的問題和解決方式 順帶一提系統是win10 1.註冊github帳號，設定repository2.安裝Node.js,git3.安裝好Node.js後，可以用npm安裝hexo$ np">
@@ -101,14 +101,14 @@
 <p><pre><code>deploy:<br>  type: git<br>  repo: git@github.com:yaruki000/yaruki000.github.io.git<br>  branch: master</code></pre></p>
 <p>這個repo其實就是quick step裡面ssh的地址<br><img src="/2017/06/26/使用hexo-github-page建立部落格/quick_step.jpg" alt="quick_step.jpg" title=""><br>那剛剛建立的ssh key其實就是在這邊會派上用場了，最後再次執行<code>hexo d</code>即上傳成功!</p>
 <p>所以之後要建立新文章，使用的指令有</p>
-<p><pre><code>hexo new “文章標題”  #建立新文章<br>hexo clean          #清除緩存，clean無法改成字首簡寫<br>hexo g              #生成<br>hexo d              #deploy</code></pre></p>
+<p><pre><code>hexo new “文章標題”   #建立新文章<br>hexo clean          #清除緩存，clean無法改成字首簡寫<br>hexo g              #生成<br>hexo d              #deploy</code></pre></p>
 <p>最後補充一下，編寫post的時候若想要放圖片<br>可以到_config.yml修改post_asset_folder為true，以後每建立新的文章都會順便建立專屬的資料夾讓你放圖片進去。<br><code>post_asset_folder: true</code><br>那麼要顯示圖片就可以輸入：</p>
-<p><pre><code>““<br>““ #不打附加文字</code></pre></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\&#123;% asset_img example.jpg This is an example image %\&#125;</div><div class="line">\&#123;% asset_img example.jpg %\&#125; #不打附加文字</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/26/使用hexo-github-page建立部落格/" data-id="cj4dutris0002ngu2gxy55vj8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/26/使用hexo-github-page建立部落格/" data-id="cj4dv3ht20002bgu2jcn9khd1" class="article-share-link">Share</a>
       
       
     </footer>
